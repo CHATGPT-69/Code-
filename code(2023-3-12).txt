@@ -1,0 +1,1271 @@
+output2 <- matrix(NA, nrow = 5100, ncol = 437, dimnames = list(NULL, c(
+  "slopeM1", "slopeM2", "slopeM3", "slopeM4", "slopeM5", "slopeM6a", "slopeM6b", "slopeM7a", "slopeM7b", 
+  "slopeM8a", "slopeM8b", "slopeM9a", "slopeM9b", "slopeM10a", "slopeM10b", "slopeM11a", "slopeM11b", 
+  "slopeM12a", "slopeM12b", "slopeM13a", "slopeM13b", "slopeM14a", "slopeM14b", "slopeM15a", "slopeM15b", 
+  "slopeM16a", "slopeM16b", "slopeM16c", "slopeM17a", "slopeM17b", "slopeM17c", "slopeM18a", "slopeM18b", 
+  "slopeM18c", "slopeM19a", "slopeM19b", "slopeM19c", "slopeM20a", "slopeM20b", "slopeM20c", "slopeM21a", 
+  "slopeM21b", "slopeM21c", "slopeM22a", "slopeM22b", "slopeM22c", "slopeM23a", "slopeM23b", "slopeM23c", 
+  "slopeM24a", "slopeM24b", "slopeM24c", "slopeM25a", "slopeM25b", "slopeM25c", "slopeM26a", "slopeM26b", 
+  "slopeM26c", "slopeM26d", "slopeM27a", "slopeM27b", "slopeM27c", "slopeM27d", "slopeM28a", "slopeM28b", 
+  "slopeM28c", "slopeM28d", "slopeM29a", "slopeM29b", "slopeM29c", "slopeM29d", "slopeM30a", "slopeM30b", 
+  "slopeM30c", "slopeM30d", "slopeM31a", "slopeM31b", "slopeM31c", "slopeM31d", "slopeM31e", "IntM1", 
+  "IntM2", "IntM3", "IntM4", "IntM5", "IntM6", "IntM7", "IntM8", "IntM9", "IntM10", "IntM11", "IntM12", 
+  "IntM13", "IntM14", "IntM15", "IntM16", "IntM17", "IntM18", "IntM19", "IntM20", "IntM21", "IntM22", 
+  "IntM23", "IntM24", "IntM25", "IntM26", "IntM27", "IntM28", "IntM29", "IntM30", "IntM31", "IntM32", 
+  "PredictM1a", "PredictM1b", "PredictM1c", "PredictM1d", "PredictM2a", "PredictM2b", "PredictM2c", "PredictM2d", 
+  "PredictM3a", "PredictM3b", "PredictM3c", "PredictM3d", "PredictM4a", "PredictM4b", "PredictM4c", "PredictM4d", "PredictM5a", "PredictM5b", "PredictM5c", "PredictM5d", "PredictM6a", "PredictM6b", "PredictM6c", "PredictM6d",
+  "PredictM7a", "PredictM7b", "PredictM7c", "PredictM7d", "PredictM8a", "PredictM8b", "PredictM8c", "PredictM8d",
+  "PredictM9a", "PredictM9b", "PredictM9c", "PredictM9d", "PredictM10a", "PredictM10b", "PredictM10c", "PredictM10d",
+  "PredictM11a", "PredictM11b", "PredictM11c", "PredictM11d", "PredictM12a", "PredictM12b", "PredictM12c", "PredictM12d",
+  "PredictM13a", "PredictM13b", "PredictM13c", "PredictM13d", "PredictM14a", "PredictM14b", "PredictM14c", "PredictM14d",
+  "PredictM15a", "PredictM15b", "PredictM15c", "PredictM15d", "PredictM16a", "PredictM16b", "PredictM16c", "PredictM16d",
+  "PredictM17a", "PredictM17b", "PredictM17c", "PredictM17d", "PredictM18a", "PredictM18b", "PredictM18c", "PredictM18d",
+  "PredictM19a", "PredictM19b", "PredictM19c", "PredictM19d", "PredictM20a", "PredictM20b", "PredictM20c", "PredictM20d",
+  "PredictM21a", "PredictM21b", "PredictM21c", "PredictM21d", "PredictM22a", "PredictM22b", "PredictM22c", "PredictM22d",
+  "PredictM23a", "PredictM23b", "PredictM23c", "PredictM23d", "PredictM24a", "PredictM24b", "PredictM24c", "PredictM24d",
+  "PredictM25a", "PredictM25b", "PredictM25c", "PredictM25d", "PredictM26a", "PredictM26b", "PredictM26c", "PredictM26d",
+  "PredictM27a", "PredictM27b", "PredictM27c", "PredictM27d", "PredictM28a", "PredictM28b", "PredictM28c", "PredictM28d",
+  "PredictM29a", "PredictM29b", "PredictM29c", "PredictM29d", "PredictM30a", "PredictM30b", "PredictM30c", "PredictM30d",
+  "PredictM31a", "PredictM31b", "PredictM31c", "PredictM31d", "PredictM32a", "PredictM32b", "PredictM32c", "PredictM32d",
+  "aicM1", "aicM2", "aicM3", "aicM4", "aicM5", "aicM6", "aicM7", "aicM8", "aicM9", "aicM10", "aicM11", "aicM12", "aicM13", 
+  "aicM14", "aicM15","aicM16", "aicM17", "aicM18", "aicM19", "aicM20", "aicM21", "aicM22", "aicM23", "aicM24", "aicM25", 
+  "aicM26", "aicM27", "aicM28", "aicM29", "aicM30", "aicM31", "aicM32", "pM1", "pM2", "pM3", "pM4", "pM5", "pM6a", "pM6b", 
+  "pM7a", "pM7b", "pM8a", "pM8b", "pM9a", "pM9b", "pM10a", "pM10b", "pM11a", "pM11b", "pM12a", "pM12b", "pM13a", "pM13b", 
+  "pM14a", "pM14b", "pM15a", "pM15b", "pM16a", "pM16b", "pM16c", "pM17a", "pM17b", "pM17c", "pM18a", "pM18b", "pM18c", "pM19a", 
+  "pM19b", "pM19c", "pM20a", "pM20b", "pM20c", "pM21a", "pM21b", "pM21c", "pM22a", "pM22b", "pM22c", "pM23a", "pM23b", "pM23c", 
+  "pM24a", "pM24b", "pM24c", "pM25a", "pM25b", "pM25c", "pM26a", "pM26b", "pM26c", "pM26d", "pM27a", "pM27b", "pM27c", "pM27d", 
+  "pM28a", "pM28b", "pM28c", "pM28d", "pM29a", "pM29b", "pM29c", "pM29d", "pM30a", "pM30b", "pM30c", "pM30d", "pM31a", "pM31b", 
+  "pM31c", "pM31d", "pM31e", "pM1z", "pM2z", "pM3z", "pM4z", "pM5z", "pM6z", "pM6zb", "pM7z", "pM7zb", "pM8z", "pM8zb", "pM9z", 
+  "pM9zb", "pM10z", "pM10zb", "pM11z", "pM11zb", "pM12z", "pM12zb", "pM13z", "pM13zb", "pM14z", "pM14zb", "pM15z", "pM15zb", "pM16z", 
+  "pM16zb", "pM16zbc", "pM17z", "pM17zb", "pM17zbc", "pM18z", "pM18zb", "pM18zbc", "pM19z", "pM19zb", "pM19zbc", "pM20z", "pM20zb", "pM20zbc", "pM21z", "pM21zb",
+  "pM21zbc", "pM22z", "pM22zb", "pM22zbc", "pM23z", "pM23zb", "pM23zbc", "pM24z",
+  "pM24zb", "pM24zbc", "pM25z", "pM25zb", "pM25zbc", "pM26z", "pM26zb", "pM26zbc",
+  "pM26zcd", "pM27z", "pM27zb", "pM27zbc", "pM27zcd", "pM28z", "pM28zb", "pM28zbc",
+  "pM28zcd", "pM29z", "pM29zb", "pM29zbc", "pM29zcd", "pM30z", "pM30zb", "pM30zbc",
+  "pM30zcd", "pM31z", "pM31zb", "pM31zbc", "pM31zcd", "pM31zcde", "SD2", "finalpval",
+  "N", "k", "j")))
+
+for (j in 1:10) {
+  N<-j* 10
+  for (k in 1:51) {
+    results = NULL
+    diff<-c()
+    for (i in 1:10) {
+      M<- 200
+      SD1<- 50
+      SD2<- k*10-10
+      Slope1<-1.2   # all 5 slopes
+      Slope2<-1.2
+      Slope3<-1.2
+      Slope4<-1.2
+      Slope5<-1.2
+      Intercept<-600
+      slopeM1=c()
+      slopeM2=c()
+      slopeM3=c()
+      slopeM4=c()
+      slopeM5=c()
+      slopeM6a<-c()
+      slopeM6b<-c()
+      slopeM7a<-c()
+      slopeM7b<-c()
+      slopeM8a<-c()
+      slopeM8b<-c()
+      slopeM9a<-c()
+      slopeM9b<-c()
+      slopeM10a<-c()
+      slopeM10b<-c()
+      slopeM11a<-c()
+      slopeM11b<-c()
+      slopeM12a<-c()
+      slopeM12b<-c()
+      slopeM13a<-c()
+      slopeM13b<-c()
+      slopeM14a<-c()
+      slopeM14b<-c()
+      slopeM15a<-c()
+      slopeM15b<-c()
+      slopeM16a<-c()
+      slopeM16b<-c()
+      slopeM16c<-c()
+      slopeM17a<-c()
+      slopeM17b<-c()
+      slopeM17c<-c()
+      slopeM18a<-c()
+      slopeM18b<-c()
+      slopeM18c<-c()
+      slopeM19a<-c()
+      slopeM19b<-c()
+      slopeM19c<-c()
+      slopeM20a<-c()
+      slopeM20b<-c()
+      slopeM20c<-c()
+      slopeM21a<-c()
+      slopeM21b<-c()
+      slopeM21c<-c()
+      slopeM22a<-c()
+      slopeM22b<-c()
+      slopeM22c<-c()
+      slopeM23a<-c()
+      slopeM23b<-c()
+      slopeM23c<-c()
+      slopeM24a<-c()
+      slopeM24b<-c()
+      slopeM24c<-c()
+      slopeM25a<-c()
+      slopeM25b<-c()
+      slopeM25c<-c()
+      slopeM26a<-c()
+      slopeM26b<-c()
+      slopeM26c<-c()
+      slopeM26d<-c()
+      slopeM27a<-c()
+      slopeM27b<-c()
+      slopeM27c<-c()
+      slopeM27d<-c()
+      slopeM28a<-c()
+      slopeM28b<-c()
+      slopeM28c<-c()
+      slopeM28d<-c()
+      slopeM29a<-c()
+      slopeM29b<-c()
+      slopeM29c<-c()
+      slopeM29d<-c()
+      slopeM30a<-c()
+      slopeM30b<-c()
+      slopeM30c<-c()
+      slopeM30d<-c()
+      slopeM31a<-c()
+      slopeM31b<-c()
+      slopeM31c<-c()
+      slopeM31d<-c()
+      slopeM31e<-c()
+      IntM1=c()  #Intercept will be the same for each version of model
+      IntM2=c()
+      IntM3=c()
+      IntM4=c()
+      IntM5=c()
+      IntM6<-c()
+      IntM7<-c()
+      IntM8<-c()
+      IntM9<-c()
+      IntM10<-c()
+      IntM11<-c()
+      IntM12<-c()
+      IntM13<-c()
+      IntM14<-c()
+      IntM15<-c()
+      IntM16<-c()
+      IntM17<-c()
+      IntM18<-c()
+      IntM19<-c()
+      IntM20<-c()
+      IntM21<-c()
+      IntM22<-c()
+      IntM23<-c()
+      IntM24<-c()
+      IntM25<-c()
+      IntM26<-c()
+      IntM27<-c()
+      IntM28<-c()
+      IntM29<-c()
+      IntM30<-c()
+      IntM31<-c()
+      IntM32<-c()  # add the null model intercept
+      finalpval = c()
+      # Vectors for Prediction Values (Model 1)
+      PredictM1a<-c()
+      PredictM1b<-c()
+      PredictM1c<-c()
+      PredictM1d<-c()
+      # Vectors for Prediction Values (Model 2)
+      PredictM2a<-c()
+      PredictM2b<-c()
+      PredictM2c<-c()
+      PredictM2d<-c()
+      # Vectors for Prediction Values (Model 3)
+      PredictM3a<-c()
+      PredictM3b<-c()
+      PredictM3c<-c()
+      PredictM3d<-c()
+      # Vectors for Prediction Values (Model 4)
+      PredictM4a<-c()
+      PredictM4b<-c()
+      PredictM4c<-c()
+      PredictM4d<-c()
+      # Vectors for Prediction Values (Model 5)
+      PredictM5a<-c()
+      PredictM5b<-c()
+      PredictM5c<-c()
+      PredictM5d<-c()
+      # Vectors for Prediction Values (Model 6)
+      PredictM6a<-c()
+      PredictM6b<-c()
+      PredictM6c<-c()
+      PredictM6d<-c()
+      # Vectors for Prediction Values (Model 7)
+      PredictM7a<-c()
+      PredictM7b<-c()
+      PredictM7c<-c()
+      PredictM7d<-c()
+      # Vectors for Prediction Values (Model 8)
+      PredictM8a<-c()
+      PredictM8b<-c()
+      PredictM8c<-c()
+      PredictM8d<-c()
+      # Vectors for Prediction Values (Model 9)
+      PredictM9a<-c()
+      PredictM9b<-c()
+      PredictM9c<-c()
+      PredictM9d<-c()
+      # Vectors for Prediction Values (Model 10)
+      PredictM10a<-c()
+      PredictM10b<-c()
+      PredictM10c<-c()
+      PredictM10d<-c()
+      # Vectors for Prediction Values (Model 11)
+      PredictM11a<-c()
+      PredictM11b<-c()
+      PredictM11c<-c()
+      PredictM11d<-c()
+      # Vectors for Prediction Values (Model 12)
+      PredictM12a<-c()
+      PredictM12b<-c()
+      PredictM12c<-c()
+      PredictM12d<-c()
+      # Vectors for Prediction Values (Model 13)
+      PredictM13a<-c()
+      PredictM13b<-c()
+      PredictM13c<-c()
+      PredictM13d<-c()
+      # Vectors for Prediction Values (Model 14)
+      PredictM14a<-c()
+      PredictM14b<-c()
+      PredictM14c<-c()
+      PredictM14d<-c()
+      # Vectors for Prediction Values (Model 15)
+      PredictM15a<-c()
+      PredictM15b<-c()
+      PredictM15c<-c()
+      PredictM15d<-c()
+      # Vectors for Prediction Values (Model 16)
+      PredictM16a<-c()
+      PredictM16b<-c()
+      PredictM16c<-c()
+      PredictM16d<-c()
+      # Vectors for Prediction Values (Model 17)
+      PredictM17a<-c()
+      PredictM17b<-c()
+      PredictM17c<-c()
+      PredictM17d<-c()
+      # Vectors for Prediction Values (Model 18)
+      PredictM18a<-c()
+      PredictM18b<-c()
+      PredictM18c<-c()
+      PredictM18d<-c()
+      # Vectors for Prediction Values (Model 19)
+      PredictM19a<-c()
+      PredictM19b<-c()
+      PredictM19c<-c()
+      PredictM19d<-c()
+      # Vectors for Prediction Values (Model 20)
+      PredictM20a<-c()
+      PredictM20b<-c()
+      PredictM20c<-c()
+      PredictM20d<-c()
+      # Vectors for Prediction Values (Model 21)
+      PredictM21a<-c()
+      PredictM21b<-c()
+      PredictM21c<-c()
+      PredictM21d<-c()
+      # Vectors for Prediction Values (Model 22)
+      PredictM22a<-c()
+      PredictM22b<-c()
+      PredictM22c<-c()
+      PredictM22d<-c()
+      # Vectors for Prediction Values (Model 23)
+      PredictM23a<-c()
+      PredictM23b<-c()
+      PredictM23c<-c()
+      PredictM23d<-c()
+      # Vectors for Prediction Values (Model 24)
+      PredictM24a<-c()
+      PredictM24b<-c()
+      PredictM24c<-c()
+      PredictM24d<-c()
+      # Vectors for Prediction Values (Model 25)
+      PredictM25a<-c()
+      PredictM25b<-c()
+      PredictM25c<-c()
+      PredictM25d<-c()
+      # Vectors for Prediction Values (Model 26)
+      PredictM26a<-c()
+      PredictM26b<-c()
+      PredictM26c<-c()
+      PredictM26d<-c()
+      # Vectors for Prediction Values (Model 27)
+      PredictM27a<-c()
+      PredictM27b<-c()
+      PredictM27c<-c()
+      PredictM27d<-c()
+      # Vectors for Prediction Values (Model 28)
+      PredictM28a<-c()
+      PredictM28b<-c()
+      PredictM28c<-c()
+      PredictM28d<-c()
+      # Vectors for Prediction Values (Model 29)
+      PredictM29a<-c()
+      PredictM29b<-c()
+      PredictM29c<-c()
+      PredictM29d<-c()
+      # Vectors for Prediction Values (Model 30)
+      PredictM30a<-c()
+      PredictM30b<-c()
+      PredictM30c<-c()
+      PredictM30d<-c()
+      # Vectors for Prediction Values (Model 31)
+      PredictM31a<-c()
+      PredictM31b<-c()
+      PredictM31c<-c()
+      PredictM31d<-c()
+      # Vectors for Prediction Values (Model 32)
+      PredictM32a<-c()
+      PredictM32b<-c()
+      PredictM32c<-c()
+      PredictM32d<-c()
+      # Old data
+      Area = rnorm(N, M, SD1)
+      Prec = rnorm(N, M, SD1)
+      pH = rnorm(N, M, SD1)
+      temp = rnorm(N, M, SD1)
+      light = rnorm(N, M, SD1)
+      SR<-Intercept+ Slope1*Area + Slope2*Prec + Slope3*pH + Slope4*light + Slope5*temp + rnorm(N,0,SD2)  # Set these up so slopes can be changed at top
+      old<-as.data.frame(cbind(Area, Prec, SR, pH, light, temp))
+      # New data
+      Area1 = rnorm(N, M, SD1)
+      Prec1 = rnorm(N, M, SD1)
+      pH1 = rnorm(N, M, SD1)
+      temp1 = rnorm(N, M, SD1)
+      light1 = rnorm(N, M, SD1)
+      SR1<-Intercept+ Slope1*Area1 + Slope2*Prec1 + Slope3*pH1 + Slope4*light1 + Slope5*temp1 + rnorm(N,0,SD2) # same here
+      new<-as.data.frame(cbind(Area1, SR1, Prec1, pH1, light1, temp1))
+      # Linear models
+      M1=lm(old$SR~old$Area)
+      M2=lm(old$SR~old$Prec)
+      M3=lm(old$SR~old$pH)
+      M4=lm(old$SR~old$light)
+      M5=lm(old$SR~old$temp)
+      M6=lm(old$SR~old$Area + old$Prec)
+      M7=lm(old$SR~old$Area + old$pH)
+      M8=lm(old$SR~old$Area + old$light)
+      M9=lm(old$SR~old$Area + old$temp)
+      M10=lm(old$SR~old$Prec + old$pH)
+      M11=lm(old$SR~old$Prec + old$light)
+      M12=lm(old$SR~old$Prec + old$temp)
+      M13=lm(old$SR~old$pH + old$light)
+      M14=lm(old$SR~old$pH + old$temp)
+      M15=lm(old$SR~old$light + old$temp)
+      M16=lm(old$SR~old$Area + old$Prec + old$pH)
+      M17=lm(old$SR~old$Area + old$Prec + old$light)
+      M18=lm(old$SR~old$Area + old$Prec + old$temp)
+      M19=lm(old$SR~old$Area + old$pH+ old$light)
+      M20=lm(old$SR~old$Area + old$pH + old$temp)
+      M21=lm(old$SR~old$Area + old$light + old$temp)
+      M22=lm(old$SR~old$Prec + old$pH+ old$light)
+      M23=lm(old$SR~old$Prec + old$pH + old$temp)
+      M24=lm(old$SR~old$Prec + old$light + old$temp)
+      M25=lm(old$SR~old$pH + old$light + old$temp)    
+      M26=lm(old$SR~old$Area + old$Prec + old$pH + old$light)
+      M27=lm(old$SR~old$Area + old$Prec + old$pH + old$temp)
+      M28=lm(old$SR~old$Area + old$Prec + old$light + old$temp)
+      M29=lm(old$SR~old$Area + old$pH + old$light + old$temp)
+      M30=lm(old$SR~old$Prec + old$pH + old$light + old$temp)
+      M31=lm(old$SR~old$Area + old$Prec + old$pH + old$light + old$temp)
+      M32<-lm(old$SR~1)
+      
+      # Slope errors for Models
+      slopeM1=c(slopeM1, M1$coefficients[2]-Slope1)
+      slopeM2=c(slopeM2, M2$coefficients[2]-Slope2)
+      slopeM3=c(slopeM3, M3$coefficients[2]-Slope3)
+      slopeM4=c(slopeM4, M4$coefficients[2]-Slope4)
+      slopeM5=c(slopeM5, M5$coefficients[2]-Slope5)
+      slopeM6a<-c(slopeM6a, M6$coefficients[2]-Slope1)
+      slopeM6b<-c(slopeM6b, M6$coefficients[3]-Slope2)
+      slopeM7a<-c(slopeM7a, M7$coefficients[2]-Slope1)
+      slopeM7b<-c(slopeM7b, M7$coefficients[3]-Slope3)
+      slopeM8a<-c(slopeM8a, M8$coefficients[2]-Slope1)
+      slopeM8b<-c(slopeM8b, M8$coefficients[3]-Slope4)
+      slopeM9a<-c(slopeM9a, M9$coefficients[3]-Slope1)
+      slopeM9b<-c(slopeM9b, M9$coefficients[2]-Slope5)
+      slopeM10a<-c(slopeM10a, M10$coefficients[2]-Slope2)
+      slopeM10b<-c(slopeM10b, M10$coefficients[3]-Slope3)
+      slopeM11a<-c(slopeM11a, M11$coefficients[2]-Slope2)
+      slopeM11b<-c(slopeM11b, M11$coefficients[3]-Slope4)
+      slopeM12a<-c(slopeM12a, M12$coefficients[2]-Slope2)
+      slopeM12b<-c(slopeM12b, M12$coefficients[3]-Slope5)
+      slopeM13a<-c(slopeM13a, M13$coefficients[2]-Slope3)
+      slopeM13b<-c(slopeM13b, M13$coefficients[3]-Slope4)
+      slopeM14a<-c(slopeM14a, M14$coefficients[2]-Slope3)
+      slopeM14b<-c(slopeM14b, M14$coefficients[3]-Slope5)
+      slopeM15a<-c(slopeM15a, M15$coefficients[2]-Slope4)
+      slopeM15b<-c(slopeM15b, M15$coefficients[3]-Slope5)
+      slopeM16a<-c(slopeM16a, M16$coefficients[2]-Slope1)
+      slopeM16b<-c(slopeM16b, M16$coefficients[3]-Slope2)
+      slopeM16c<-c(slopeM16c, M16$coefficients[4]-Slope3)
+      slopeM17a<-c(slopeM17a, M17$coefficients[2]-Slope1)
+      slopeM17b<-c(slopeM17b, M17$coefficients[3]-Slope2)
+      slopeM17c<-c(slopeM17c, M17$coefficients[4]-Slope4)
+      slopeM18a<-c(slopeM18a, M18$coefficients[2]-Slope1)
+      slopeM18b<-c(slopeM18b, M18$coefficients[3]-Slope2)
+      slopeM18c<-c(slopeM18c, M18$coefficients[4]-Slope5)
+      slopeM19a<-c(slopeM19a, M19$coefficients[2]-Slope1)
+      slopeM19b<-c(slopeM19b, M19$coefficients[3]-Slope3)
+      slopeM19c<-c(slopeM19c, M19$coefficients[4]-Slope4)
+      slopeM20a<-c(slopeM20a, M20$coefficients[2]-Slope1)
+      slopeM20b<-c(slopeM20b, M20$coefficients[3]-Slope3)
+      slopeM20c<-c(slopeM20c, M20$coefficients[4]-Slope5)
+      slopeM21a<-c(slopeM21a, M21$coefficients[2]-Slope1)
+      slopeM21b<-c(slopeM21b, M21$coefficients[3]-Slope4)
+      slopeM21c<-c(slopeM21c, M21$coefficients[4]-Slope5)
+      slopeM22a<-c(slopeM22a, M22$coefficients[2]-Slope2)
+      slopeM22b<-c(slopeM22b, M22$coefficients[3]-Slope3)
+      slopeM22c<-c(slopeM22c, M22$coefficients[4]-Slope4)
+      slopeM23a<-c(slopeM23a, M23$coefficients[2]-Slope2)
+      slopeM23b<-c(slopeM23b, M23$coefficients[3]-Slope3)
+      slopeM23c<-c(slopeM23c, M23$coefficients[4]-Slope5)
+      slopeM24a<-c(slopeM24a, M24$coefficients[2]-Slope2)
+      slopeM24b<-c(slopeM24b, M24$coefficients[3]-Slope4)
+      slopeM24c<-c(slopeM24c, M24$coefficients[4]-Slope5)
+      slopeM25a<-c(slopeM25a, M25$coefficients[2]-Slope3)
+      slopeM25b<-c(slopeM25b, M25$coefficients[3]-Slope4)
+      slopeM25c<-c(slopeM25c, M25$coefficients[4]-Slope5)
+      slopeM26a<-c(slopeM26a, M26$coefficients[2]-Slope1)
+      slopeM26b<-c(slopeM26b, M26$coefficients[3]-Slope2)
+      slopeM26c<-c(slopeM26c, M26$coefficients[4]-Slope3)
+      slopeM26d<-c(slopeM26d, M26$coefficients[5]-Slope4)
+      slopeM27a<-c(slopeM27a, M27$coefficients[2]-Slope1)
+      slopeM27b<-c(slopeM27b, M27$coefficients[3]-Slope2)
+      slopeM27c<-c(slopeM27c, M27$coefficients[4]-Slope3)
+      slopeM27d<-c(slopeM27d, M27$coefficients[5]-Slope5)
+      slopeM28a<-c(slopeM28a, M28$coefficients[2]-Slope1)
+      slopeM28b<-c(slopeM28b, M28$coefficients[3]-Slope2)
+      slopeM28c<-c(slopeM28c, M28$coefficients[4]-Slope4)
+      slopeM28d<-c(slopeM28d, M28$coefficients[5]-Slope5)
+      slopeM29a<-c(slopeM29a, M29$coefficients[2]-Slope1)
+      slopeM29b<-c(slopeM29b, M29$coefficients[3]-Slope3)
+      slopeM29c<-c(slopeM29c, M29$coefficients[4]-Slope4)
+      slopeM29d<-c(slopeM29d, M29$coefficients[5]-Slope5)
+      slopeM30a<-c(slopeM30a, M30$coefficients[2]-Slope2)
+      slopeM30b<-c(slopeM30b, M30$coefficients[3]-Slope3)
+      slopeM30c<-c(slopeM30c, M30$coefficients[4]-Slope4)
+      slopeM30d<-c(slopeM30d, M30$coefficients[5]-Slope5)
+      slopeM31a<-c(slopeM31a, M31$coefficients[2]-Slope1)
+      slopeM31b<-c(slopeM31b, M31$coefficients[3]-Slope2)
+      slopeM31c<-c(slopeM31c, M31$coefficients[4]-Slope3)
+      slopeM31d<-c(slopeM31d, M31$coefficients[5]-Slope4)
+      slopeM31e<-c(slopeM31e, M31$coefficients[6]-Slope5)
+      # Intercept errors for Models
+      IntM1=c(IntM1, M1$coefficients[1]-Intercept)
+      IntM2=c(IntM2, M2$coefficients[1]-Intercept)
+      IntM3=c(IntM3, M3$coefficients[1]-Intercept)
+      IntM4=c(IntM4, M4$coefficients[1]-Intercept)
+      IntM5=c(IntM5, M5$coefficients[1]-Intercept)
+      IntM6<-c(IntM6, M6$coefficients[1]-Intercept)
+      IntM7<-c(IntM7, M7$coefficients[1]-Intercept)
+      IntM8<-c(IntM8, M8$coefficients[1]-Intercept)
+      IntM9<-c(IntM9, M9$coefficients[1]-Intercept)
+      IntM10<-c(IntM10, M10$coefficients[1]-Intercept)
+      IntM11<-c(IntM11, M11$coefficients[1]-Intercept)
+      IntM12<-c(IntM12, M12$coefficients[1]-Intercept)
+      IntM13<-c(IntM13, M13$coefficients[1]-Intercept)
+      IntM14<-c(IntM14, M14$coefficients[1]-Intercept)
+      IntM15<-c(IntM15, M15$coefficients[1]-Intercept)
+      IntM16<-c(IntM16, M16$coefficients[1]-Intercept)
+      IntM17<-c(IntM17, M17$coefficients[1]-Intercept)
+      IntM18<-c(IntM18, M18$coefficients[1]-Intercept)
+      IntM19<-c(IntM19, M19$coefficients[1]-Intercept)
+      IntM20<-c(IntM20, M20$coefficients[1]-Intercept)
+      IntM21<-c(IntM21, M21$coefficients[1]-Intercept)
+      IntM22<-c(IntM22, M22$coefficients[1]-Intercept)
+      IntM23<-c(IntM23, M23$coefficients[1]-Intercept)
+      IntM24<-c(IntM24, M24$coefficients[1]-Intercept)
+      IntM25<-c(IntM25, M25$coefficients[1]-Intercept)
+      IntM26<-c(IntM26, M26$coefficients[1]-Intercept)
+      IntM27<-c(IntM27, M27$coefficients[1]-Intercept)
+      IntM28<-c(IntM28, M28$coefficients[1]-Intercept)
+      IntM29<-c(IntM29, M29$coefficients[1]-Intercept)
+      IntM30<-c(IntM30, M30$coefficients[1]-Intercept)
+      IntM31<-c(IntM31, M31$coefficients[1]-Intercept)
+      IntM32<-c(IntM32, M32$coefficients[1]-Intercept)
+      # p-values
+      pM1 <- summary(M1)$coefficients[2,4]
+      pM2 <- summary(M2)$coefficients[2,4]
+      pM3 <- summary(M3)$coefficients[2,4]
+      pM4 <- summary(M4)$coefficients[2,4]
+      pM5 <- summary(M5)$coefficients[2,4]
+      pM6a <- summary(M6)$coefficients[2,4]
+      pM6b <- summary(M6)$coefficients[3,4]
+      pM7a <- summary(M7)$coefficients[2,4]
+      pM7b <- summary(M7)$coefficients[3,4]
+      pM8a <- summary(M8)$coefficients[2,4]
+      pM8b <- summary(M8)$coefficients[3,4]
+      pM9a <- summary(M9)$coefficients[2,4]
+      pM9b <- summary(M9)$coefficients[3,4]
+      pM10a <- summary(M10)$coefficients[2,4]
+      pM10b <- summary(M10)$coefficients[3,4]
+      pM11a <- summary(M11)$coefficients[2,4]
+      pM11b <- summary(M11)$coefficients[3,4]
+      pM12a <- summary(M12)$coefficients[2,4]
+      pM12b <- summary(M12)$coefficients[3,4]
+      pM13a <- summary(M13)$coefficients[2,4]
+      pM13b <- summary(M13)$coefficients[3,4]  
+      pM14a <- summary(M14)$coefficients[2,4]
+      pM14b <- summary(M14)$coefficients[3,4]
+      pM15a <- summary(M15)$coefficients[2,4]
+      pM15b <- summary(M15)$coefficients[3,4]
+      pM16a <- summary(M16)$coefficients[2,4]
+      pM16b <- summary(M16)$coefficients[3,4]
+      pM16c <- summary(M16)$coefficients[4,4]
+      pM17a <- summary(M17)$coefficients[2,4]
+      pM17b <- summary(M17)$coefficients[3,4]
+      pM17c <- summary(M17)$coefficients[4,4]
+      pM18a <- summary(M18)$coefficients[2,4]
+      pM18b <- summary(M18)$coefficients[3,4]
+      pM18c <- summary(M18)$coefficients[4,4]
+      pM19a <- summary(M19)$coefficients[2,4]
+      pM19b <- summary(M19)$coefficients[3,4]
+      pM19c <- summary(M19)$coefficients[4,4]
+      pM20a <- summary(M20)$coefficients[2,4]
+      pM20b <- summary(M20)$coefficients[3,4]
+      pM20c <- summary(M20)$coefficients[4,4]
+      pM21a <- summary(M21)$coefficients[2,4]
+      pM21b <- summary(M21)$coefficients[3,4]
+      pM21c <- summary(M21)$coefficients[4,4]
+      pM22a <- summary(M22)$coefficients[2,4]
+      pM22b <- summary(M22)$coefficients[3,4]
+      pM22c <- summary(M22)$coefficients[4,4]
+      pM23a <- summary(M23)$coefficients[2,4]
+      pM23b <- summary(M23)$coefficients[3,4]
+      pM23c <- summary(M23)$coefficients[4,4]
+      pM24a <- summary(M24)$coefficients[2,4]
+      pM24b <- summary(M24)$coefficients[3,4]
+      pM24c <- summary(M24)$coefficients[4,4]
+      pM25a <- summary(M25)$coefficients[2,4]
+      pM25b <- summary(M25)$coefficients[3,4]
+      pM25c <- summary(M25)$coefficients[4,4]  
+      pM26a <- summary(M26)$coefficients[2,4]
+      pM26b <- summary(M26)$coefficients[3,4]
+      pM26c <- summary(M26)$coefficients[4,4]        
+      pM26d <- summary(M26)$coefficients[5,4]
+      pM27a <- summary(M27)$coefficients[2,4]
+      pM27b <- summary(M27)$coefficients[3,4]
+      pM27c <- summary(M27)$coefficients[4,4]        
+      pM27d <- summary(M27)$coefficients[5,4]
+      pM28a <- summary(M28)$coefficients[2,4]
+      pM28b <- summary(M28)$coefficients[3,4]
+      pM28c <- summary(M28)$coefficients[4,4]        
+      pM28d <- summary(M28)$coefficients[5,4]
+      pM29a <- summary(M29)$coefficients[2,4]
+      pM29b <- summary(M29)$coefficients[3,4]
+      pM29c <- summary(M29)$coefficients[4,4]        
+      pM29d <- summary(M29)$coefficients[5,4]
+      pM30a <- summary(M30)$coefficients[2,4]
+      pM30b <- summary(M30)$coefficients[3,4]
+      pM30c <- summary(M30)$coefficients[4,4]        
+      pM30d <- summary(M30)$coefficients[5,4]
+      pM31a <- summary(M31)$coefficients[2,4]
+      pM31b <- summary(M31)$coefficients[3,4]
+      pM31c <- summary(M31)$coefficients[4,4]        
+      pM31d <- summary(M31)$coefficients[5,4]
+      pM31e <- summary(M31)$coefficients[6,4]
+      
+      # p-value thresholds
+      pM1z = if(pM1 < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      pM2z = if(pM2 < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      pM3z = if(pM3 < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      pM4z = if(pM4 < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      pM5z = if(pM5 < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      
+      pM6z = if(pM6a < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      pM6zb = if(pM6b < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      pM7z = if(pM7a < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      pM7zb = if(pM7b < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      pM8z = if(pM8a < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      pM8zb = if(pM8b < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      pM9z = if(pM9a < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      pM9zb = if(pM9b < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      pM10z = if(pM10a < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      pM10zb = if(pM10b < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      pM11z = if(pM11a < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      pM11zb = if(pM11b < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      
+      pM12z = if(pM12a < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      pM12zb = if(pM12b < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      
+      pM13z = if(pM13a < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      pM13zb = if(pM13b < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      
+      pM14z = if(pM14a < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      pM14zb = if(pM14b < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      
+      pM15z = if(pM15a < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      pM15zb = if(pM15b < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      
+      pM16z = if(pM16a < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      pM16zb = if(pM16b < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      pM16zbc = if(pM16c < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      
+      pM17z = if(pM17a < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      pM17zb = if(pM17b < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      pM17zbc = if(pM17c < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      
+      pM18z = if(pM18a < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      pM18zb = if(pM18b < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      pM18zbc = if(pM18c < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      
+      pM19z = if(pM19a < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      pM19zb = if(pM19b < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      pM19zbc = if(pM19c < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      
+      pM20z = if(pM20a < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      pM20zb = if(pM20b < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      pM20zbc = if(pM20c < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      
+      pM21z = if(pM21a < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      pM21zb = if(pM21b < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      pM21zbc = if(pM21c < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      
+      pM22z = if(pM22a < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      pM22zb = if(pM22b < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      pM22zbc = if(pM22c < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      
+      pM23z = if(pM23a < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      pM23zb = if(pM23b < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      pM23zbc = if(pM23c < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      
+      pM24z = if(pM24a < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      pM24zb = if(pM24b < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      pM24zbc = if(pM24c < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      
+      pM25z = if(pM25a < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      pM25zb = if(pM25b < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      pM25zbc = if(pM25c < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      
+      pM26z = if(pM26a < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      pM26zb = if(pM26b < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      pM26zbc = if(pM26c < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      pM26zcd = if(pM26d < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      
+      pM27z = if(pM27a < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      pM27zb = if(pM27b < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      pM27zbc = if(pM27c < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      pM27zcd = if(pM27d < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      
+      pM28z = if(pM28a < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      pM28zb = if(pM28b < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      pM28zbc = if(pM28c < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      pM28zcd = if(pM28d < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      
+      pM29z = if(pM29a < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      pM29zb = if(pM29b < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      pM29zbc = if(pM29c < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      pM29zcd = if(pM29d < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      
+      pM30z = if(pM30a < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      pM30zb = if(pM30b < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      pM30zbc = if(pM30c < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      pM30zcd = if(pM30d < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      
+      pM31z = if(pM31a < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      pM31zb = if(pM31b < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      pM31zbc = if(pM31c < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      pM31zcd = if(pM31d < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      pM31zcde = if(pM31e < 0.05){
+        ("1")
+      } else {
+        ("0")
+      }
+      
+      finalpval = if(pM1z == 0 & pM2z == 0 & pM3z == 0 & pM4z == 0 & pM5z== 0 & as.numeric(pM6z)*as.numeric(pM6zb) == 0
+                     & as.numeric(pM7z)*as.numeric(pM7zb) == 0 & as.numeric(pM8z)*as.numeric(pM8zb) == 0 & as.numeric(pM9z)*as.numeric(pM9zb) == 0
+                     & as.numeric(pM10z)*as.numeric(pM10zb) == 0 & as.numeric(pM11z)*as.numeric(pM11zb) == 0 & as.numeric(pM12z)*as.numeric(pM12zb) == 0
+                     & as.numeric(pM13z)*as.numeric(pM13zb) == 0 & as.numeric(pM14z)*as.numeric(pM14zb) == 0
+                     & as.numeric(pM15z)*as.numeric(pM15zb) == 0 & as.numeric(pM16z)*as.numeric(pM16zb)*as.numeric(pM16zbc) == 0
+                     & as.numeric(pM17z)*as.numeric(pM17zb)*as.numeric(pM17zbc) == 0 & as.numeric(pM18z)*as.numeric(pM18zb)*as.numeric(pM18zbc) == 0
+                     & as.numeric(pM19z)*as.numeric(pM19zb)*as.numeric(pM19zbc) == 0 & as.numeric(pM20z)*as.numeric(pM20zb)*as.numeric(pM20zbc) == 0
+                     & as.numeric(pM21z)*as.numeric(pM21zb)*as.numeric(pM21zbc) == 0 & as.numeric(pM22z)*as.numeric(pM22zb)*as.numeric(pM22zbc) == 0
+                     & as.numeric(pM23z)*as.numeric(pM23zb)*as.numeric(pM23zbc) == 0 & as.numeric(pM24z)*as.numeric(pM24zb)*as.numeric(pM24zbc) == 0
+                     & as.numeric(pM25z)*as.numeric(pM25zb)*as.numeric(pM25zbc) == 0
+                     & as.numeric(pM26z)*as.numeric(pM26zb)*as.numeric(pM26zbc)*as.numeric(pM26zcd) == 0
+                     & as.numeric(pM27z)*as.numeric(pM27zb)*as.numeric(pM27zbc)*as.numeric(pM27zcd) == 0
+                     & as.numeric(pM28z)*as.numeric(pM28zb)*as.numeric(pM28zbc)*as.numeric(pM28zcd) == 0
+                     & as.numeric(pM29z)*as.numeric(pM29zb)*as.numeric(pM29zbc)*as.numeric(pM29zcd) == 0
+                     & as.numeric(pM30z)*as.numeric(pM30zb)*as.numeric(pM30zbc)*as.numeric(pM30zcd) == 0
+                     & as.numeric(pM31z)*as.numeric(pM31zb)*as.numeric(pM31zbc)*as.numeric(pM31zcd)*as.numeric(pM31zcde) == 1)
+      {
+        ("1")
+      } else {
+        ("0")
+      }
+      # AIC Values
+      aicM1 = AIC(M1)
+      aicM2 = AIC(M2)
+      aicM3 = AIC(M3)
+      aicM4 = AIC(M4)
+      aicM5 = AIC(M5)
+      aicM6 = AIC(M6)
+      aicM7 = AIC(M7)
+      aicM8 = AIC(M8)
+      aicM9 = AIC(M9)
+      aicM10 = AIC(M10)
+      aicM11 = AIC(M11)
+      aicM12 = AIC(M12)
+      aicM13 = AIC(M13)
+      aicM14 = AIC(M14)
+      aicM15 = AIC(M15)
+      aicM16 = AIC(M16)
+      aicM17 = AIC(M17)
+      aicM18 = AIC(M18)
+      aicM19 = AIC(M19)
+      aicM20 = AIC(M20)
+      aicM21 = AIC(M21)
+      aicM22 = AIC(M22)
+      aicM23 = AIC(M23)
+      aicM24 = AIC(M24)
+      aicM25 = AIC(M25)
+      aicM26 = AIC(M26)
+      aicM27 = AIC(M27)
+      aicM28 = AIC(M28)
+      aicM29 = AIC(M29)
+      aicM30 = AIC(M30)
+      aicM31 = AIC(M31)
+      aicM32 = AIC(M32)
+      
+      # Predictions for Model 1
+      PredictM1a<-c(PredictM1a, mean(abs(M1$coefficients[1] + M1$coefficients[2]*old$Area - old$SR)/old$SR))
+      PredictM1b<-c(PredictM1b, mean(abs(M1$coefficients[1] + M1$coefficients[2]*old$Area - old$SR)))
+      PredictM1c<-c(PredictM1c, mean(abs(M1$coefficients[1] + M1$coefficients[2]*new$Area1 - new$SR1)/new$SR1))
+      PredictM1d<-c(PredictM1d, mean(abs(M1$coefficients[1] + M1$coefficients[2]*new$Area1 - new$SR1)))
+      # Predictions for Model 2
+      PredictM2a<-c(PredictM2a, mean(abs(M2$coefficients[1] + M2$coefficients[2]*old$Prec - old$SR)/old$SR))
+      PredictM2b<-c(PredictM2b, mean(abs(M2$coefficients[1] + M2$coefficients[2]*old$Prec - old$SR)))
+      PredictM2c<-c(PredictM2c, mean(abs(M2$coefficients[1] + M2$coefficients[2]*new$Prec1 - new$SR1)/new$SR1))
+      PredictM2d<-c(PredictM2d, mean(abs(M2$coefficients[1] + M2$coefficients[2]*new$Prec1 - new$SR1)))
+      # Predictions for Model 3
+      PredictM3a<-c(PredictM3a, mean(abs(M3$coefficients[1] + M3$coefficients[2]*old$pH - old$SR)/old$SR))
+      PredictM3b<-c(PredictM3b, mean(abs(M3$coefficients[1] + M3$coefficients[2]*old$pH - old$SR)))
+      PredictM3c<-c(PredictM3c, mean(abs(M3$coefficients[1] + M3$coefficients[2]*new$pH1 - new$SR1)/new$SR1))
+      PredictM3d<-c(PredictM3d, mean(abs(M3$coefficients[1] + M3$coefficients[2]*new$pH1 - new$SR1)))
+      # Predictions for Model 4
+      PredictM4a<-c(PredictM4a, mean(abs(M4$coefficients[1] + M4$coefficients[2]*old$light - old$SR)/old$SR))
+      PredictM4b<-c(PredictM4b, mean(abs(M4$coefficients[1] + M4$coefficients[2]*old$light - old$SR)))
+      PredictM4c<-c(PredictM4c, mean(abs(M4$coefficients[1] + M4$coefficients[2]*new$light1 - new$SR1)/new$SR1))
+      PredictM4d<-c(PredictM4d, mean(abs(M4$coefficients[1] + M4$coefficients[2]*new$light1 - new$SR1)))
+      # Predictions for Model 5
+      PredictM5a<-c(PredictM5a, mean(abs(M5$coefficients[1] + M5$coefficients[2]*old$temp - old$SR)/old$SR))
+      PredictM5b<-c(PredictM5b, mean(abs(M5$coefficients[1] + M5$coefficients[2]*old$temp - old$SR)))
+      PredictM5c<-c(PredictM5c, mean(abs(M5$coefficients[1] + M5$coefficients[2]*new$temp1 - new$SR1)/new$SR1))
+      PredictM5d<-c(PredictM5d, mean(abs(M5$coefficients[1] + M5$coefficients[2]*new$temp1 - new$SR1)))
+      # Predictions for Model 6
+      PredictM6a<-c(PredictM6a, mean(abs(M6$coefficients[1] + M6$coefficients[2]*old$Area + M6$coefficients[3]*old$Prec - old$SR)/old$SR))
+      PredictM6b<-c(PredictM6b, mean(abs(M6$coefficients[1] + M6$coefficients[2]*old$Area + M6$coefficients[3]*old$Prec - old$SR)))
+      PredictM6c<-c(PredictM6c, mean(abs(M6$coefficients[1] + M6$coefficients[2]*new$Area1 + M6$coefficients[3]*new$Prec1 - new$SR1)/new$SR1))
+      PredictM6d<-c(PredictM6d, mean(abs(M6$coefficients[1] + M6$coefficients[2]*new$Area1 + M6$coefficients[3]*new$Prec1 - new$SR1)))
+      # Predictions for Model 7
+      PredictM7a<-c(PredictM7a, mean(abs(M7$coefficients[1] + M7$coefficients[2]*old$Area + M7$coefficients[3]*old$pH - old$SR)/old$SR))
+      PredictM7b<-c(PredictM7b, mean(abs(M7$coefficients[1] + M7$coefficients[2]*old$Area + M7$coefficients[3]*old$pH - old$SR)))
+      PredictM7c<-c(PredictM7c, mean(abs(M7$coefficients[1] + M7$coefficients[2]*new$Area1 + M7$coefficients[3]*new$pH1 - new$SR1)/new$SR1))
+      PredictM7d<-c(PredictM7d, mean(abs(M7$coefficients[1] + M7$coefficients[2]*new$Area1 + M7$coefficients[3]*new$pH1 - new$SR1)))
+      # Predictions for Model 8
+      PredictM8a<-c(PredictM8a, mean(abs(M8$coefficients[1] + M8$coefficients[2]*old$Area + M8$coefficients[3]*old$temp - old$SR)/old$SR))
+      PredictM8b<-c(PredictM8b, mean(abs(M8$coefficients[1] + M8$coefficients[2]*old$Area + M8$coefficients[3]*old$temp - old$SR)))
+      PredictM8c<-c(PredictM8c, mean(abs(M8$coefficients[1] + M8$coefficients[2]*new$Area1 + M8$coefficients[3]*new$temp1 - new$SR1)/new$SR1))
+      PredictM8d<-c(PredictM8d, mean(abs(M8$coefficients[1] + M8$coefficients[2]*new$Area1 + M8$coefficients[3]*new$temp1 - new$SR1)))
+      # Predictions for Model 9
+      PredictM9a<-c(PredictM9a, mean(abs(M9$coefficients[1] + M9$coefficients[2]*old$Area + M9$coefficients[3]*old$light - old$SR)/old$SR))
+      PredictM9b<-c(PredictM9b, mean(abs(M9$coefficients[1] + M9$coefficients[2]*old$Area + M9$coefficients[3]*old$light - old$SR)))
+      PredictM9c<-c(PredictM9c, mean(abs(M9$coefficients[1] + M9$coefficients[2]*new$Area1 + M9$coefficients[3]*new$light1 - new$SR1)/new$SR1))
+      PredictM9d<-c(PredictM9d, mean(abs(M9$coefficients[1] + M9$coefficients[2]*new$Area1 + M9$coefficients[3]*new$light1 - new$SR1)))
+      # Predictions for Model 10
+      PredictM10a<-c(PredictM10a, mean(abs(M10$coefficients[1] + M10$coefficients[2]*old$Prec + M10$coefficients[3]*old$pH - old$SR)/old$SR))
+      PredictM10b<-c(PredictM10b, mean(abs(M10$coefficients[1] + M10$coefficients[2]*old$Prec + M10$coefficients[3]*old$pH - old$SR)))
+      PredictM10c<-c(PredictM10c, mean(abs(M10$coefficients[1] + M10$coefficients[2]*new$Prec1 + M10$coefficients[3]*new$pH1 - new$SR1)/new$SR1))
+      PredictM10d<-c(PredictM10d, mean(abs(M10$coefficients[1] + M10$coefficients[2]*new$Prec1 + M10$coefficients[3]*new$pH1 - new$SR1)))
+      # Predictions for Model 11
+      PredictM11a<-c(PredictM11a, mean(abs(M11$coefficients[1] + M11$coefficients[2]*old$Prec + M11$coefficients[3]*old$light - old$SR)/old$SR))
+      PredictM11b<-c(PredictM11b, mean(abs(M11$coefficients[1] + M11$coefficients[2]*old$Prec + M11$coefficients[3]*old$light - old$SR)))
+      PredictM11c<-c(PredictM11c, mean(abs(M11$coefficients[1] + M11$coefficients[2]*new$Prec1 + M11$coefficients[3]*new$light1 - new$SR1)/new$SR1))
+      PredictM11d<-c(PredictM11d, mean(abs(M11$coefficients[1] + M11$coefficients[2]*new$Prec1 + M11$coefficients[3]*new$light1 - new$SR1)))
+      # Predictions for Model 12
+      PredictM12a<-c(PredictM12a, mean(abs(M12$coefficients[1] + M12$coefficients[2]*old$Prec + M12$coefficients[3]*old$temp - old$SR)/old$SR))
+      PredictM12b<-c(PredictM12b, mean(abs(M12$coefficients[1] + M12$coefficients[2]*old$Prec + M12$coefficients[3]*old$temp - old$SR)))
+      PredictM12c<-c(PredictM12c, mean(abs(M12$coefficients[1] + M12$coefficients[2]*new$Prec1 + M12$coefficients[3]*new$temp1 - new$SR1)/new$SR1))
+      PredictM12d<-c(PredictM12d, mean(abs(M12$coefficients[1] + M12$coefficients[2]*new$Prec1 + M12$coefficients[3]*new$temp1 - new$SR1)))
+      # Predictions for Model 13
+      PredictM13a<-c(PredictM13a, mean(abs(M13$coefficients[1] + M13$coefficients[2]*old$pH + M13$coefficients[3]*old$light - old$SR)/old$SR))
+      PredictM13b<-c(PredictM13b, mean(abs(M13$coefficients[1] + M13$coefficients[2]*old$pH + M13$coefficients[3]*old$light - old$SR)))
+      PredictM13c<-c(PredictM13c, mean(abs(M13$coefficients[1] + M13$coefficients[2]*new$pH1 + M13$coefficients[3]*new$light1 - new$SR1)/new$SR1))
+      PredictM13d<-c(PredictM13d, mean(abs(M13$coefficients[1] + M13$coefficients[2]*new$pH1 + M13$coefficients[3]*new$light1 - new$SR1)))
+      # Predictions for Model 14
+      PredictM14a<-c(PredictM14a, mean(abs(M14$coefficients[1] + M14$coefficients[2]*old$pH + M14$coefficients[3]*old$temp - old$SR)/old$SR))
+      PredictM14b<-c(PredictM14b, mean(abs(M14$coefficients[1] + M14$coefficients[2]*old$pH + M14$coefficients[3]*old$temp - old$SR)))
+      PredictM14c<-c(PredictM14c, mean(abs(M14$coefficients[1] + M14$coefficients[2]*new$pH1 + M14$coefficients[3]*new$temp1 - new$SR1)/new$SR1))
+      PredictM14d<-c(PredictM14d, mean(abs(M14$coefficients[1] + M14$coefficients[2]*new$pH1 + M14$coefficients[3]*new$temp1 - new$SR1)))
+      # Predictions for Model 15
+      PredictM15a<-c(PredictM15a, mean(abs(M15$coefficients[1] + M15$coefficients[2]*old$light + M15$coefficients[3]*old$temp - old$SR)/old$SR))
+      PredictM15b<-c(PredictM15b, mean(abs(M15$coefficients[1] + M15$coefficients[2]*old$light + M15$coefficients[3]*old$temp - old$SR)))
+      PredictM15c<-c(PredictM15c, mean(abs(M15$coefficients[1] + M15$coefficients[2]*new$light1 + M15$coefficients[3]*new$temp1 - new$SR1)/new$SR1))
+      PredictM15d<-c(PredictM15d, mean(abs(M15$coefficients[1] + M15$coefficients[2]*new$light1 + M15$coefficients[3]*new$temp1 - new$SR1)))
+      # Predictions for Model 16
+      PredictM16a<-c(PredictM16a, mean(abs(M16$coefficients[1] + M16$coefficients[2]*old$Area + M16$coefficients[3]*old$Prec + M16$coefficients[4]*old$pH - old$SR)/old$SR))
+      PredictM16b<-c(PredictM16b, mean(abs(M16$coefficients[1] + M16$coefficients[2]*old$Area + M16$coefficients[3]*old$Prec + M16$coefficients[4]*old$pH - old$SR)))
+      PredictM16c<-c(PredictM16a, mean(abs(M16$coefficients[1] + M16$coefficients[2]*new$Area1 + M16$coefficients[3]*new$Prec1 + M16$coefficients[4]*new$pH1 - new$SR1)/new$SR1))
+      PredictM16d<-c(PredictM16d, mean(abs(M16$coefficients[1] + M16$coefficients[2]*new$Area1 + M16$coefficients[3]*new$Prec1 + M16$coefficients[4]*new$pH1 - new$SR1)))
+      # Predictions for Model 17
+      PredictM17a<-c(PredictM17a, mean(abs(M17$coefficients[1] + M17$coefficients[2]*old$Area + M17$coefficients[3]*old$Prec + M17$coefficients[4]*old$light - old$SR)/old$SR))
+      PredictM17b<-c(PredictM17b, mean(abs(M17$coefficients[1] + M17$coefficients[2]*old$Area + M17$coefficients[3]*old$Prec + M17$coefficients[4]*old$light - old$SR)))
+      PredictM17c<-c(PredictM17a, mean(abs(M17$coefficients[1] + M17$coefficients[2]*new$Area1 + M17$coefficients[3]*new$Prec1 + M17$coefficients[4]*new$light1 - new$SR1)/new$SR1))
+      PredictM17d<-c(PredictM17d, mean(abs(M17$coefficients[1] + M17$coefficients[2]*new$Area1 + M17$coefficients[3]*new$Prec1 + M17$coefficients[4]*new$light1 - new$SR1)))
+      # Predictions for Model 18
+      PredictM18a<-c(PredictM18a, mean(abs(M18$coefficients[1] + M18$coefficients[2]*old$Area + M18$coefficients[3]*old$Prec + M18$coefficients[4]*old$temp - old$SR)/old$SR))
+      PredictM18b<-c(PredictM18b, mean(abs(M18$coefficients[1] + M18$coefficients[2]*old$Area + M18$coefficients[3]*old$Prec + M18$coefficients[4]*old$temp - old$SR)))
+      PredictM18c<-c(PredictM18a, mean(abs(M18$coefficients[1] + M18$coefficients[2]*new$Area1 + M18$coefficients[3]*new$Prec1 + M18$coefficients[4]*new$temp1 - new$SR1)/new$SR1))
+      PredictM18d<-c(PredictM18d, mean(abs(M18$coefficients[1] + M18$coefficients[2]*new$Area1 + M18$coefficients[3]*new$Prec1 + M18$coefficients[4]*new$temp1 - new$SR1)))
+      # Predictions for Model 19
+      PredictM19a<-c(PredictM19a, mean(abs(M19$coefficients[1] + M19$coefficients[2]*old$Area + M19$coefficients[3]*old$pH + M19$coefficients[4]*old$light - old$SR)/old$SR))
+      PredictM19b<-c(PredictM19b, mean(abs(M19$coefficients[1] + M19$coefficients[2]*old$Area + M19$coefficients[3]*old$pH + M19$coefficients[4]*old$light - old$SR)))
+      PredictM19c<-c(PredictM19c, mean(abs(M19$coefficients[1] + M19$coefficients[2]*new$Area1 + M19$coefficients[3]*new$pH1 + M19$coefficients[4]*new$light1 - new$SR1)/new$SR1))
+      PredictM19d<-c(PredictM19d, mean(abs(M19$coefficients[1] + M19$coefficients[2]*new$Area1 + M19$coefficients[3]*new$pH1 + M19$coefficients[4]*new$light1 - new$SR1)))
+      # Predictions for Model 20
+      PredictM20a<-c(PredictM20a, mean(abs(M20$coefficients[1] + M20$coefficients[2]*old$Area + M20$coefficients[3]*old$pH + M20$coefficients[4]*old$temp - old$SR)/old$SR))
+      PredictM20b<-c(PredictM20b, mean(abs(M20$coefficients[1] + M20$coefficients[2]*old$Area + M20$coefficients[3]*old$pH + M20$coefficients[4]*old$temp - old$SR)))
+      PredictM20c<-c(PredictM20c, mean(abs(M20$coefficients[1] + M20$coefficients[2]*new$Area1 + M20$coefficients[3]*new$pH1 + M20$coefficients[4]*new$temp1 - new$SR1)/new$SR1))
+      PredictM20d<-c(PredictM20d, mean(abs(M20$coefficients[1] + M20$coefficients[2]*new$Area1 + M20$coefficients[3]*new$pH1 + M20$coefficients[4]*new$temp1 - new$SR1)))
+      # Predictions for Model 21
+      PredictM21a<-c(PredictM21a, mean(abs(M21$coefficients[1] + M21$coefficients[2]*old$Area + M21$coefficients[3]*old$light + M21$coefficients[4]*old$temp - old$SR)/old$SR))
+      PredictM21b<-c(PredictM21b, mean(abs(M21$coefficients[1] + M21$coefficients[2]*old$Area + M21$coefficients[3]*old$light + M21$coefficients[4]*old$temp - old$SR)))
+      PredictM21c<-c(PredictM21c, mean(abs(M21$coefficients[1] + M21$coefficients[2]*new$Area1 + M21$coefficients[3]*new$light1 + M21$coefficients[4]*new$temp1 - new$SR1)/new$SR1))
+      PredictM21d<-c(PredictM21d, mean(abs(M21$coefficients[1] + M21$coefficients[2]*new$Area1 + M21$coefficients[3]*new$light1 + M21$coefficients[4]*new$temp1 - new$SR1)))
+      # Predictions for Model 22
+      PredictM22a<-c(PredictM22a, mean(abs(M22$coefficients[1] + M22$coefficients[2]*old$Prec + M22$coefficients[3]*old$pH + M22$coefficients[4]*old$light - old$SR)/old$SR))
+      PredictM22b<-c(PredictM22b, mean(abs(M22$coefficients[1] + M22$coefficients[2]*old$Prec + M22$coefficients[3]*old$pH + M22$coefficients[4]*old$light - old$SR)))
+      PredictM22c<-c(PredictM22c, mean(abs(M22$coefficients[1] + M22$coefficients[2]*new$Prec1 + M22$coefficients[3]*new$pH1 + M22$coefficients[4]*new$light1 - new$SR1)/new$SR1))
+      PredictM22d<-c(PredictM22d, mean(abs(M22$coefficients[1] + M22$coefficients[2]*new$Prec1 + M22$coefficients[3]*new$pH1 + M22$coefficients[4]*new$light1 - new$SR1)))
+      # Predictions for Model 23
+      PredictM23a<-c(PredictM23a, mean(abs(M23$coefficients[1] + M23$coefficients[2]*old$Prec + M23$coefficients[3]*old$pH + M23$coefficients[4]*old$temp - old$SR)/old$SR))
+      PredictM23b<-c(PredictM23b, mean(abs(M23$coefficients[1] + M23$coefficients[2]*old$Prec + M23$coefficients[3]*old$pH + M23$coefficients[4]*old$temp - old$SR)))
+      PredictM23c<-c(PredictM23c, mean(abs(M23$coefficients[1] + M23$coefficients[2]*new$Prec1 + M23$coefficients[3]*new$pH1 + M23$coefficients[4]*new$temp1 - new$SR1)/new$SR1))
+      PredictM23d<-c(PredictM23d, mean(abs(M23$coefficients[1] + M23$coefficients[2]*new$Prec1 + M23$coefficients[3]*new$pH1 + M23$coefficients[4]*new$temp1 - new$SR1)))
+      # Predictions for Model 24
+      PredictM24a<-c(PredictM24a, mean(abs(M24$coefficients[1] + M24$coefficients[2]*old$Prec + M24$coefficients[3]*old$light + M24$coefficients[4]*old$temp - old$SR)/old$SR))
+      PredictM24b<-c(PredictM24b, mean(abs(M24$coefficients[1] + M24$coefficients[2]*old$Prec + M24$coefficients[3]*old$light + M24$coefficients[4]*old$temp - old$SR)))
+      PredictM24c<-c(PredictM24c, mean(abs(M24$coefficients[1] + M24$coefficients[2]*new$Prec1 + M24$coefficients[3]*new$light1 + M24$coefficients[4]*new$temp1 - new$SR1)/new$SR1))
+      PredictM24d<-c(PredictM24d, mean(abs(M24$coefficients[1] + M24$coefficients[2]*new$Prec1 + M24$coefficients[3]*new$light1 + M24$coefficients[4]*new$temp1 - new$SR1)))
+      # Predictions for Model 25
+      PredictM25a<-c(PredictM25a, mean(abs(M25$coefficients[1] + M25$coefficients[2]*old$pH + M25$coefficients[3]*old$light + M25$coefficients[4]*old$temp - old$SR)/old$SR))
+      PredictM25b<-c(PredictM25b, mean(abs(M25$coefficients[1] + M25$coefficients[2]*old$pH + M25$coefficients[3]*old$light + M25$coefficients[4]*old$temp - old$SR)))
+      PredictM25c<-c(PredictM25c, mean(abs(M25$coefficients[1] + M25$coefficients[2]*new$pH1 + M25$coefficients[3]*new$light1 + M25$coefficients[4]*new$temp1 - new$SR1)/new$SR1))
+      PredictM25d<-c(PredictM25d, mean(abs(M25$coefficients[1] + M25$coefficients[2]*new$pH1 + M25$coefficients[3]*new$light1 + M25$coefficients[4]*new$temp1 - new$SR1)))
+      # Predictions for Model 26
+      PredictM26a<-c(PredictM26a, mean(abs(M26$coefficients[1] + M26$coefficients[2]*old$Area + M26$coefficients[3]*old$Prec + M26$coefficients[4]*old$pH + M26$coefficients[5]*old$light - old$SR)/old$SR))
+      PredictM26b<-c(PredictM26b, mean(abs(M26$coefficients[1] + M26$coefficients[2]*old$Area + M26$coefficients[3]*old$Prec + M26$coefficients[4]*old$pH + M26$coefficients[5]*old$light - old$SR)))
+      PredictM26c<-c(PredictM26c, mean(abs(M26$coefficients[1] + M26$coefficients[2]*new$Area1 + M26$coefficients[3]*new$Prec1 + M26$coefficients[4]*new$pH1 + M26$coefficients[5]*new$light1 - new$SR1)/new$SR1))
+      PredictM26d<-c(PredictM26d, mean(abs(M26$coefficients[1] + M26$coefficients[2]*new$Area1 + M26$coefficients[3]*new$Prec1 + M26$coefficients[4]*new$pH1 + M26$coefficients[5]*new$light1 - new$SR1)))
+      # Predictions for Model 27
+      PredictM27a<-c(PredictM27a, mean(abs(M27$coefficients[1] + M27$coefficients[2]*old$Area + M27$coefficients[3]*old$Prec + M27$coefficients[4]*old$pH + M27$coefficients[5]*old$temp - old$SR)/old$SR))
+      PredictM27b<-c(PredictM27b, mean(abs(M27$coefficients[1] + M27$coefficients[2]*old$Area + M27$coefficients[3]*old$Prec + M27$coefficients[4]*old$pH + M27$coefficients[5]*old$temp - old$SR)))
+      PredictM27c<-c(PredictM27c, mean(abs(M27$coefficients[1] + M27$coefficients[2]*new$Area1 + M27$coefficients[3]*new$Prec1 + M27$coefficients[4]*new$pH1 + M27$coefficients[5]*new$temp1 - new$SR1)/new$SR1))
+      PredictM27d<-c(PredictM27d, mean(abs(M27$coefficients[1] + M27$coefficients[2]*new$Area1 + M27$coefficients[3]*new$Prec1 + M27$coefficients[4]*new$pH1 + M27$coefficients[5]*new$temp1 - new$SR1)))
+      # Predictions for Model 28
+      PredictM28a<-c(PredictM28a, mean(abs(M28$coefficients[1] + M28$coefficients[2]*old$Area + M28$coefficients[3]*old$Prec + M28$coefficients[4]*old$light + M28$coefficients[5]*old$temp - old$SR)/old$SR))
+      PredictM28b<-c(PredictM28b, mean(abs(M28$coefficients[1] + M28$coefficients[2]*old$Area + M28$coefficients[3]*old$Prec + M28$coefficients[4]*old$light + M28$coefficients[5]*old$temp - old$SR)))
+      PredictM28c<-c(PredictM28c, mean(abs(M28$coefficients[1] + M28$coefficients[2]*new$Area1 + M28$coefficients[3]*new$Prec1 + M28$coefficients[4]*new$light1 + M28$coefficients[5]*new$temp1 - new$SR1)/new$SR1))
+      PredictM28d<-c(PredictM28d, mean(abs(M28$coefficients[1] + M28$coefficients[2]*new$Area1 + M28$coefficients[3]*new$Prec1 + M28$coefficients[4]*new$light1 + M28$coefficients[5]*new$temp1 - new$SR1)))
+      # Predictions for Model 29
+      PredictM29a<-c(PredictM29a, mean(abs(M29$coefficients[1] + M29$coefficients[2]*old$Area + M29$coefficients[3]*old$pH + M29$coefficients[4]*old$light + M29$coefficients[5]*old$temp - old$SR)/old$SR))
+      PredictM29b<-c(PredictM29b, mean(abs(M29$coefficients[1] + M29$coefficients[2]*old$Area + M29$coefficients[3]*old$pH + M29$coefficients[4]*old$light + M29$coefficients[5]*old$temp - old$SR)))
+      PredictM29c<-c(PredictM29c, mean(abs(M29$coefficients[1] + M29$coefficients[2]*new$Area1 + M29$coefficients[3]*new$pH1 + M29$coefficients[4]*new$light1 + M29$coefficients[5]*new$temp1 - new$SR1)/new$SR1))
+      PredictM29d<-c(PredictM29d, mean(abs(M29$coefficients[1] + M29$coefficients[2]*new$Area1 + M29$coefficients[3]*new$pH1 + M29$coefficients[4]*new$light1 + M29$coefficients[5]*new$temp1 - new$SR1)))
+      # Predictions for Model 30
+      PredictM30a<-c(PredictM30a, mean(abs(M30$coefficients[1] + M30$coefficients[2]*old$Prec + M30$coefficients[3]*old$pH + M30$coefficients[4]*old$light + M30$coefficients[5]*old$temp - old$SR)/old$SR))
+      PredictM30b<-c(PredictM30b, mean(abs(M30$coefficients[1] + M30$coefficients[2]*old$Prec + M30$coefficients[3]*old$pH + M30$coefficients[4]*old$light + M30$coefficients[5]*old$temp - old$SR)))
+      PredictM30c<-c(PredictM30c, mean(abs(M30$coefficients[1] + M30$coefficients[2]*new$Prec1 + M30$coefficients[3]*new$pH1 + M30$coefficients[4]*new$light1 + M30$coefficients[5]*new$temp1 - new$SR1)/new$SR1))
+      PredictM30d<-c(PredictM30d, mean(abs(M30$coefficients[1] + M30$coefficients[2]*new$Prec1 + M30$coefficients[3]*new$pH1 + M30$coefficients[4]*new$light1 + M30$coefficients[5]*new$temp1 - new$SR1)))
+      # Predictions for Model 31
+      PredictM31a<-c(PredictM31a, mean(abs(M31$coefficients[1] + M31$coefficients[2]*old$Area + M31$coefficients[3]*old$Prec + M31$coefficients[4]*old$pH + M31$coefficients[5]*old$light + M31$coefficients[6]*old$temp - old$SR)/old$SR))
+      PredictM31b<-c(PredictM31b, mean(abs(M31$coefficients[1] + M31$coefficients[2]*old$Area + M31$coefficients[3]*old$Prec + M31$coefficients[4]*old$pH + M31$coefficients[5]*old$light + M31$coefficients[6]*old$temp - old$SR)))
+      PredictM31c<-c(PredictM31c, mean(abs(M31$coefficients[1] + M31$coefficients[2]*new$Area1 + M31$coefficients[3]*new$Prec1 + M31$coefficients[4]*new$pH1 + M31$coefficients[5]*new$light1 + M31$coefficients[6]*new$temp1 - new$SR1)/new$SR1))
+      PredictM31d<-c(PredictM31d, mean(abs(M31$coefficients[1] + M31$coefficients[2]*new$Area1 + M31$coefficients[3]*new$Prec1 + M31$coefficients[4]*new$pH1 + M31$coefficients[5]*new$light1 + M31$coefficients[6]*new$temp1 - new$SR1)))
+      # Predictions forModel 32
+      PredictM32a<-c(PredictM32a, mean(abs(M32$coefficients[1] -old$SR)/old$SR))
+      PredictM32b<-c(PredictM32b, mean(abs(M32$coefficients[1] -old$SR)))
+      PredictM32c<-c(PredictM32c, mean(abs(M32$coefficients[1] -new$SR1)/new$SR1))
+      PredictM32d<-c(PredictM32d, mean(abs(M32$coefficients[1] -new$SR1)))
+      
+      
+      results_iteration = cbind(
+        slopeM1, slopeM2, slopeM3, slopeM4, slopeM5, slopeM6a, slopeM6b, slopeM7a, slopeM7b, slopeM8a, 
+        slopeM8b, slopeM9a, slopeM9b, slopeM10a, slopeM10b, slopeM11a, slopeM11b, slopeM12a, slopeM12b, 
+        slopeM13a, slopeM13b, slopeM14a, slopeM14b, slopeM15a, slopeM15b, slopeM16a, slopeM16b, slopeM16c, 
+        slopeM17a, slopeM17b, slopeM17c, slopeM18a, slopeM18b, slopeM18c, slopeM19a, slopeM19b, slopeM19c, 
+        slopeM20a, slopeM20b, slopeM20c, slopeM21a, slopeM21b, slopeM21c, slopeM22a, slopeM22b, slopeM22c, 
+        slopeM23a, slopeM23b, slopeM23c, slopeM24a, slopeM24b, slopeM24c, slopeM25a, slopeM25b, slopeM25c, 
+        slopeM26a, slopeM26b, slopeM26c, slopeM26d, slopeM27a, slopeM27b, slopeM27c, slopeM27d, slopeM28a, 
+        slopeM28b, slopeM28c, slopeM28d, slopeM29a, slopeM29b, slopeM29c, slopeM29d, slopeM30a, slopeM30b, 
+        slopeM30c, slopeM30d, slopeM31a, slopeM31b, slopeM31c, slopeM31d, slopeM31e, IntM1, IntM2, IntM3, 
+        IntM4, IntM5, IntM6, IntM7, IntM8, IntM9, IntM10, IntM11, IntM12, IntM13, IntM14, IntM15, IntM16, 
+        IntM17, IntM18, IntM19, IntM20, IntM21, IntM22, IntM23, IntM24, IntM25, IntM26, IntM27, IntM28, IntM29, 
+        IntM30, IntM31, IntM32, PredictM1a, PredictM1b, PredictM1c, PredictM1d, PredictM2a, PredictM2b, PredictM2c, 
+        PredictM2d, PredictM3a, PredictM3b, PredictM3c, PredictM3d, PredictM4a, PredictM4b, PredictM4c, PredictM4d, 
+        PredictM5a, PredictM5b, PredictM5c, PredictM5d, PredictM6a, PredictM6b, PredictM6c, PredictM6d, PredictM7a, 
+        PredictM7b, PredictM7c, PredictM7d, PredictM8a, PredictM8b, PredictM8c, PredictM8d, PredictM9a, PredictM9b, 
+        PredictM9c, PredictM9d, PredictM10a, PredictM10b, PredictM10c, PredictM10d, PredictM11a, PredictM11b, PredictM11c,
+        PredictM11d, PredictM12a, PredictM12b, PredictM12c, PredictM12d, PredictM13a, PredictM13b, PredictM13c, PredictM13d, PredictM14a, PredictM14b, PredictM14c, PredictM14d,
+        PredictM15a, PredictM15b, PredictM15c, PredictM15d, PredictM16a, PredictM16b, PredictM16c, PredictM16d,
+        PredictM17a, PredictM17b, PredictM17c, PredictM17d, PredictM18a, PredictM18b, PredictM18c, PredictM18d,
+        PredictM19a, PredictM19b, PredictM19c, PredictM19d, PredictM20a, PredictM20b, PredictM20c, PredictM20d,
+        PredictM21a, PredictM21b, PredictM21c, PredictM21d, PredictM22a, PredictM22b, PredictM22c, PredictM22d,
+        PredictM23a, PredictM23b, PredictM23c, PredictM23d, PredictM24a, PredictM24b, PredictM24c, PredictM24d,
+        PredictM25a, PredictM25b, PredictM25c, PredictM25d, PredictM26a, PredictM26b, PredictM26c, PredictM26d,
+        PredictM27a, PredictM27b, PredictM27c, PredictM27d, PredictM28a, PredictM28b, PredictM28c, PredictM28d,
+        PredictM29a, PredictM29b, PredictM29c, PredictM29d, PredictM30a, PredictM30b, PredictM30c, PredictM30d,
+        PredictM31a, PredictM31b, PredictM31c, PredictM31d, PredictM32a, PredictM32b, PredictM32c, PredictM32d,
+        aicM1, aicM2, aicM3, aicM4, aicM5, aicM6, aicM7, aicM8, aicM9, aicM10, aicM11, aicM12, aicM13,
+        aicM14, aicM15, aicM16, aicM17, aicM18, aicM19, aicM20, aicM21, aicM22, aicM23, aicM24, aicM25,
+        aicM26, aicM27, aicM28, aicM29, aicM30, aicM31, aicM32, pM1, pM2, pM3, pM4, pM5, pM6a, pM6b,
+        pM7a, pM7b, pM8a, pM8b, pM9a, pM9b, pM10a, pM10b, pM11a, pM11b, pM12a, pM12b, pM13a, pM13b,
+        pM14a, pM14b, pM15a, pM15b, pM16a, pM16b, pM16c, pM17a, pM17b, pM17c, pM18a, pM18b, pM18c, pM19a,
+        pM19b, pM19c, pM20a, pM20b, pM20c, pM21a, pM21b, pM21c,pM22a, pM22b, pM22c, pM23a, pM23b, pM23c,
+        pM24a, pM24b, pM24c, pM25a, pM25b, pM25c, pM26a, pM26b, pM26c, pM26d, pM27a, pM27b, pM27c, pM27d,
+        pM28a, pM28b, pM28c, pM28d, pM29a, pM29b, pM29c, pM29d, pM30a, pM30b, pM30c, pM30d, pM31a, pM31b,
+        pM31c, pM31d, pM31e, pM1z, pM2z, pM3z, pM4z, pM5z, pM6z, pM6zb, pM7z, pM7zb, pM8z, pM8zb, pM9z,
+        pM9zb, pM10z, pM10zb, pM11z, pM11zb, pM12z, pM12zb, pM13z, pM13zb, pM14z, pM14zb, pM15z, pM15zb, pM16z,
+        pM16zb, pM16zbc, pM17z, pM17zb, pM17zbc, pM18z, pM18zb, pM18zbc, pM19z, pM19zb, pM19zbc, pM20z, pM20zb, pM20zbc, pM21z, pM21zb,
+        pM21zbc, pM22z, pM22zb, pM22zbc, pM23z, pM23zb, pM23zbc, pM24z,
+        pM24zb, pM24zbc, pM25z, pM25zb, pM25zbc, pM26z, pM26zb, pM26zbc,
+        pM26zcd, pM27z, pM27zb, pM27zbc, pM27zcd, pM28z, pM28zb, pM28zbc,
+        pM28zcd, pM29z, pM29zb, pM29zbc, pM29zcd, pM30z, pM30zb, pM30zbc,
+        pM30zcd, pM31z, pM31zb, pM31zbc, pM31zcd, pM31zcde, SD2, finalpval,
+        N, k, j)
+      output2[((j-1)*51+k),] = results_iteration    
+      results = rbind(results, results_iteration)
+      
+    }
+  }
+}
